@@ -11,13 +11,11 @@ El proyecto implementa un módulo sencillo para registrar y gestionar solicitude
 
 ## Estado del proyecto
 
-En principio, el repositorio contiene la versión inicial del sistema.
+El repositorio contiene la versión inicial y la versión refactorizada del sistema, además de una demostración y pruebas automatizadas. 
 
-Esta versión conserva intencionalmente una estructura simple y algunos problemas de diseño que serán identificados y corregidos durante las siguientes etapas del trabajo.
+La versión inicial se conserva como referencia y puede consultarse mediante el tag estado-inicial. 
 
-El estado inicial se encuentra identificado mediante el tag:
-
-`estado-inicial`
+La versión refactorizada organiza el código en modelos, repositorio y servicio y puede consultarse mediante el tag estado-refactorizado.
 
 ## Alcance
 
@@ -57,14 +55,48 @@ Las transiciones permitidas son:
 - Datos almacenados en memoria.
 - Biblioteca estándar de Python.
 
-La versión inicial no requiere instalar dependencias externas.
+El proyecto no requiere instalar dependencias externas.
+
 
 ## Estructura inicial
 
 ```text
-.
+
+├── docs/
+│   ├── code_review.md
+│   └── diagnostico.md
 ├── initial/
 │   ├── __init__.py
 │   └── app.py
+├── refactored/
+│   ├── __init__.py
+│   ├── models.py
+│   ├── repository.py
+│   └── service.py
+├── tests/
+│   └── test_requests.py
+├── demo.py
 ├── .gitignore
 └── README.md
+```
+
+
+## Ejecución y pruebas
+
+Ejecutar la demostración con la versión inicial:
+
+```bash
+python3 demo.py --version initial
+```
+
+Ejecutarla con la versión refactorizada:
+
+```bash
+python3 demo.py --version refactored
+```
+
+Ejecutar las pruebas:
+
+```bash
+python3 -m unittest discover -s tests -v
+```
