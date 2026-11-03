@@ -100,3 +100,9 @@ Ejecutar las pruebas:
 ```bash
 python3 -m unittest discover -s tests -v
 ```
+
+## Links importantes
+
+- [Repositorio remoto del proyecto](https://github.com/GomezJEmilia/TPI-MSII-Chaumont-GomezJ)
+
+- [Presentación en video](https://drive.google.com/file/d/11fzz5_6fFkIEkoIbEumNsvrcy871J29p/view?usp=sharing)
